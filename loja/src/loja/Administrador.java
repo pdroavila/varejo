@@ -19,7 +19,7 @@ public class Administrador {
     public static void main(String[] args) {
 
     }
-    // Getters e Setters
+
     public String getNomeCompleto() {
         return this.nome;
     }
