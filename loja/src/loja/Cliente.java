@@ -1,11 +1,15 @@
 package loja;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 	private String nome;
 	private String endereco;
 	private String telefone;
 	private String email;
 	private String senha;
+	private List<Pedido> pedidos;
 	
 	public Cliente(String nome, String endereco, String telefone, String email, String senha) {
 		this.nome = nome;
@@ -13,6 +17,7 @@ public class Cliente {
 		this.telefone = telefone;
 		this.email = email;
 		this.senha = senha;
+		this.pedidos = new ArrayList<>();
 	}
 	
 	///Getters e Setters
@@ -46,6 +51,13 @@ public class Cliente {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    public void adicionarPedido(Pedido pedido) {
+    	pedidos.add(pedido);
+    }
+    public List<Pedido> getPedidos(){
+    	return pedidos;
+    }
+    
     public String getDados() {
     	return "O nome completo é:"+this.nome+"\nEndereco:"+this.endereco+"\nTelefone:"+this.telefone+"\nEmail:"+this.email+"\nSenha:"+this.senha;
     }

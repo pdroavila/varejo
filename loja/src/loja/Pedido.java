@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Pedido {
-    private int numeroPedido;
+	private static int id = 1;
+	
+    private int numero;
     private ArrayList<Produto> produtos;
     private Date data;
     private String status;
     private Cliente cliente;
 
-    public Pedido(int numeroPedido, ArrayList<Produto> produtos, Date data, String status, Cliente cliente) {
-        this.numeroPedido = numeroPedido;
+    public Pedido(ArrayList<Produto> produtos, Date data, String status, Cliente cliente) {
+        this.numero = id++;
         this.produtos = produtos;
         this.data = data;
         this.status = status;
@@ -19,11 +21,11 @@ public class Pedido {
     }
 
     public int getNumeroPedido() {
-        return this.numeroPedido;
+        return this.numero;
     }
 
-    public void setNumeroPedido(int numeroPedido) {
-        this.numeroPedido = numeroPedido;
+    public void setNumeroPedido(int numero) {
+        this.numero = numero;
     }
 
     public ArrayList<Produto> getProdutos() {
@@ -51,7 +53,7 @@ public class Pedido {
     }
     
     public void exibirDetalhes() {
-        System.out.println("Número do pedido: " + this.numeroPedido);
+        System.out.println("Número do pedido: " + this.numero);
         System.out.println("Data do pedido: " + this.data);
         System.out.println("Produtos:");
         for (Produto p : this.produtos) {

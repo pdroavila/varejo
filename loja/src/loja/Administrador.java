@@ -14,23 +14,19 @@ public class Administrador {
         this.email = email;
         this.senha = senha;
     }
-
-
-    public static void main(String[] args) {
-
-    }
-
+    
+    // Getters e Setters
     public String getNomeCompleto() {
         return this.nome;
     }
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nome = nomeCompleto;
+    public void setNomeCompleto(String nome) {
+        this.nome = nome;
     }
     public String getEnderecoCompleto() {
         return this.endereco;
     }
-    public void setEnderecoCompleto(String enderecoCompleto) {
-        this.endereco = enderecoCompleto;
+    public void setEnderecoCompleto(String endereco) {
+        this.endereco = endereco;
     }
     public String getTelefone() {
         return this.telefone;
